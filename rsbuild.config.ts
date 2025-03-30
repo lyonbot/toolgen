@@ -11,6 +11,11 @@ export default defineConfig({
     entry: {
       index: './src/index.ts',
     },
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      'process.env.NODE_DEBUG': JSON.stringify(false),
+      'process.platform': JSON.stringify('browser'),
+    }
   },
   plugins: [
     pluginSass(),
@@ -19,6 +24,18 @@ export default defineConfig({
   output: {
     assetPrefix: IS_PROD ? './' /* cdn */ : './',
     cleanDistPath: IS_PROD,
+  },
+  resolve: {
+    alias: {
+      // by memfs: https://github.com/streamich/memfs/blob/master/demo/git-fsa/webpack.config.js
+      // assert: 'assert',
+      // buffer: 'buffer',
+      path: 'path-browserify',
+      process: 'process/browser',
+      stream: 'readable-stream',
+      // url: 'url',
+      // util: 'util',
+    }
   },
   server: {
     base: '/web',

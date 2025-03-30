@@ -10,10 +10,27 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "@bundler-in-browser/tailwindcss": "^0.1.2",
     "@types/lodash-es": "^4.17.12",
     "@unocss/reset": "66.1.0-beta.7",
+    "@vueuse/core": "^13.0.0",
+    "assert": "^2.1.0",
+    "buffer": "^6.0.3",
+    "bundler-in-browser": "^0.1.7",
+    "dayjs": "^1.11.13",
+    "dexie": "^4.0.11",
+    "esbuild-wasm": "^0.25.1",
     "lodash-es": "^4.17.21",
-    "vue": "^3.5.13"
+    "memfs": "^4.17.0",
+    "path-browserify": "^1.0.1",
+    "pinia": "^3.0.1",
+    "process": "^0.11.10",
+    "readable-stream": "^4.7.0",
+    "sass": "^1.86.0",
+    "url": "^0.11.4",
+    "util": "^0.12.5",
+    "vue": "^3.5.13",
+    "yon-utils": "^0.1.24"
   },
   "browserslist": [
     "defaults",
